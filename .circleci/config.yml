@@ -70,12 +70,12 @@ jobs:
   deploy:
     docker:
       - image: circleci/php:7.3-node-browsers
-          #==========ここから追加==========
+    #==========ここから追加==========
       environment:
       AWS_DEFAULT_REGION: ap-northeast-1
     #==========ここまで追加==========
-
-    #==========ここから追加==========
+    steps:
+   #==========ここから追加==========
       - checkout
       - run: sudo composer self-update --1
       - restore_cache:
