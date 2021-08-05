@@ -93,7 +93,7 @@ jobs:
             --application-name laravel-ci \
             --deployment-group-name laravel-ci \
             --s3-location bucket=${AWS_S3_BUCKET_NAME},key=laravel-ci.zip,bundleType=zip
-   deploy:
+  deploy:
     docker:
       - image: circleci/php:7.3-node-browsers
     steps:
@@ -120,4 +120,5 @@ workflows:
             branches:
               only:
                 - master
-      
+
+
